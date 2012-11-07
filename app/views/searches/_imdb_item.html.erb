@@ -1,0 +1,21 @@
+
+
+<tr>
+  <td>
+    
+     <%= form_for(@search) do |f| -%>
+       <%= f.hidden_field :year, :value => peli['anio'] %>
+       <%= peli['title']%> - <%= f.submit "#{peli['anio']}" %>
+     <% end -%>
+  </td>
+
+  <td>
+        <%= form_for(@search) do |f| -%>
+          <%= f.hidden_field :year, :value => peli['anio'] %>          
+          <%= f.hidden_field :criteria, :value => peli['title'] %>
+          <% titulo = truncate(peli['title'],  :omission => "...", :length => 35) -%>
+          <%= f.submit "'#{titulo}' - #{peli['anio']}" %>
+        <% end -%>
+  </td>
+</tr>
+

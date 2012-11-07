@@ -1,0 +1,24 @@
+<h1>Listing Searches</h1>
+
+<table class="table">
+  <tr>
+    <th>Date</th>
+    <th>Criteria</th>
+    <th>Year</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @searches.each do |search| %>
+  <tr>
+    <td><%= search.created_at %></td>  
+    <td><%= search.criteria %></td>
+    <td><%= search.year %></td>
+    <td><%= link_to raw('<i class="icon-eye-open">'), search %></i></td>
+    <td><%= link_to raw('<i class="icon-remove">'), search, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

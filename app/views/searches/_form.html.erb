@@ -1,0 +1,19 @@
+<%= form_for(@search, :html =>{:class =>"form-horizontal"}) do |f| %>
+
+  <div class="field">
+    <p>
+      Nombre de la película en inglés:
+    </p>
+    <%= f.text_field :criteria %>
+  </div>
+  <div class="field">
+    <p>
+      A&ntilde;o de la película:
+    </p>
+    <%= f.text_field :year %><br/>
+(si no lo sabés, dejalo vacío)
+  </div>
+  <div class="actions">
+    <%= f.submit "Buscar", :class => "btn btn-primary btn-large" %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<%= form_for(@contact, :html =>{:class =>"form-horizontal"}) do |f| %>
+
+  <div class="control-group">
+    <label class="control-label" for="inputName">Nombre</label>
+    <div class="controls">
+       <%= f.text_field :name %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputMail">Email</label>
+    <div class="controls">
+      <%= f.text_field :mail %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputMail">Mensaje</label>
+    <div class="controls">
+      <%= f.text_area :message, :cols => 10, :rows => 10 %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <%= f.submit "Enviar mensaje",  :class => "btn"%>
+    </div>
+  </div> 
+
+<% end %>
