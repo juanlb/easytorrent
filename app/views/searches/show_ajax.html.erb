@@ -19,8 +19,16 @@
     <div class="controls">
       <%= f.submit "Buscar", :class => "btn" %>
     </div>
-  </div>  
  <% end -%>
+    <%= form_for(@search, :html =>{:class =>"form-horizontal"}) do |f| -%>
+      <%= f.hidden_field :criteria, :value => @search.criteria %>
+      <%= f.hidden_field :year, :value => "-" %>
+      <div class="controls">
+        <%= f.submit "Buscar sin año", :class => "btn" %>
+      </div>
+    <% end -%>
+  </div>  
+
 </div>
 
 <% if @search.year.blank? -%>
