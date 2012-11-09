@@ -1,0 +1,43 @@
+<div class='well'>
+<h2>Resultados de Torrents de The Pirate Bay:</h2>
+<b>Listando <%= @result.size %> resultados</b>
+<p>Cuantas más <b>Personas Compartiendo</b> más rápido va a bajar la película. Dependiendo del tamañana, torrents con menos de 50 <b>Personas Compartiendo</b> es difícil que lleguen a bajarse.</p>
+</div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>       
+      </th>
+      <th>       
+      </th>
+      <th>
+       T&iacute;tulo
+      </th>
+      <th>
+      </th>
+      <th style='text-align:right'>
+       Tama&ntilde;o
+      </th>
+      <th style='text-align:right' >
+       Personas<br/>Compartiendo
+      </th>
+    </tr>
+  </thead>
+
+  <%= render :partial => 'tpb_item', :collection => @result, :as => :item %>
+
+</table>
+
+<div class='well'>
+
+<p>
+<% if @rechazados != 0 -%>
+No se muestran <%= @rechazados %> resultado con menos de 5 <b>seeders</b>
+<% end -%>
+</p>  
+
+</div>
+
+
+

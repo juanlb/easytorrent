@@ -1,0 +1,27 @@
+<%if @nopiratebay %>	
+<%= 'No piratas' %>
+<% else %>
+<%= "Found element:" %><br/>
+	<%= @el %><br/>
+	<br/>
+
+	<%= "Parent element:" %><br/>
+	<%= @el.parent['href'] %><br/>
+	<br/>
+
+	<%= "Parent's next_element():" %><br/>
+	<%= @el.parent.next_element %><br/>
+
+
+	<%= "Magnet" %><br/>
+	<%# @downloadlink['href'] %><br/>
+
+        <% if @torpicture %> 
+	<%= "Image" %><br/>
+	<%= @torpicture['src'] %><br/>
+        <% else %>
+        NO imagen
+        <% end %>
+<% end %>
+
+

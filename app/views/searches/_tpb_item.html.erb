@@ -1,10 +1,25 @@
 <tr>
   <td>
-    <%= item['name'] %>
+    <img src="<%= item['img_repo'] %>">
+  </td>
+  <td>
+    <% if item['picture'] -%>
+    <img src="<%= item['picture'] %>"  class="img-rounded" width="50px" heigth="50px">
+    <% end -%>
+  </td>
+  <td>
+    <p>
+      <%= item['name'] %>
+    </p>
+    <% if item['filmada'] -%>
+    <p>
+      <b>ATENCIÓN!:</b> Esta película puede llegar a ser filmada del cine.
+    </p>
+    <% end -%>
   </td>
 
   <td>
-    <b><a href="<%= item['magnet']%>" >Descargá este torrent</a> <i class="icon-download"></i></b>
+    <b><a href="<%= item['magnet']%>" >Descargar torrent</a> <i class="icon-download"></i></b>
   </td>
   <td style='text-align:right' >
     <%= item['size'] %>

@@ -12,6 +12,9 @@ Easytorrent::Application.routes.draw do
   resources :searches do
     collection do
       get 'all'
+      get 'show_ajax/:id' => 'searches#show_ajax'
+      #get 'test'
+      #get 'tpb'
     end
   end
 
